@@ -1,0 +1,50 @@
+@import url(./styles/base.css);
+
+.header {
+  position: fixed;
+  left: auto;
+  height: 4rem;
+  width: 99vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  img,
+  svg {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.header nav ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header nav ul li {
+  list-style: none;
+}
+
+.header nav ul li a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+.header nav ul li a:hover {
+  text-shadow: var(--shadow);
+}
+
+.header ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.header ul li {
+  list-style: none;
+  img,
+  svg {
+    height: 24px;
+    width: 24px;
+  }
+}
+.header ul li:hover {
+  filter: drop-shadow(var(--shadow));
+}

@@ -2,12 +2,71 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/index.css" />
     <title>portfolio</title>
   </head>
   <body>
-    <!-- <div id="app"></div> -->
-    <script type="module" src="/src/main.js"></script>
+    <div class="container">
+      <header class="header">
+        <a href="#"><img class="logo" src="./assets/logo.svg" alt="logo" /></a>
+        <nav>
+          <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Contact">Contact</a></li>
+          </ul>
+        </nav>
+        <ul>
+          <li>
+            <a href="https://github.com/vanyadzygman" target="_blank"
+              ><img src="./assets/github.svg" alt="github"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/vanya.dzygman/?hl=ru" target="_blank"
+              ><img src="./assets/instagram.svg" alt="instagram"
+            /></a>
+          </li>
+          <li>
+            <a href="https://ua.linkedin.com/" target="_blank"
+              ><img src="./assets/linkedin.svg" alt="linkedin"
+            /></a>
+          </li>
+        </ul>
+      </header>
+      <main class="main">
+        <section class="section home" id="Home">
+          <h1 class="hero">Hello <br /><span class="accent">everybody</span>!</h1>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore <br />
+            dignissimos saepe iste voluptates ipsam et eos aliquid vel ipsa aut impedit<br />
+            fuga eius asperiores sequi ea, dolore neque? Magnam, rem.
+          </p>
+          <button class="button" type="button">Let's check projects!</button>
+        </section>
+        <section class="section about" id="About">
+          <h2 class="section-title">About me</h2>
+          <p>
+            [A short intro: who you are, what you study or do and what you enjoy building.
+            <br />
+            A short intro: who you are, what you study or do and what you enjoy building.]
+          </p>
+          <p>
+            [A second paragraph: your path, approach to work, what you are looking for.]
+          </p>
+          <div class="">
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+          </div>
+        </section>
+        <section class="section projects" id="Projects">123</section>
+        <section class="section contact" id="Contact">123</section>
+      </main>
+      <!-- <footer class="footer">footer</footer> -->
+    </div>
   </body>
 </html>
