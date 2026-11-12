@@ -9,9 +9,11 @@ html {
 }
 
 body {
+  display: flex;
   font-family: var(--mono);
   font-weight: 700;
   color: var(--main-color);
+  overflow: hidden;
 }
 
 img,
