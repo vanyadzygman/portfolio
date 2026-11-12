@@ -1,8 +1,11 @@
 .header {
   position: fixed;
-  left: auto;
+  top: 0.5rem;
+  left: 25%;
+  right: 25%;
   height: 4rem;
-  width: 99vw;
+  width: 100%;
+  max-width: 50vw;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
