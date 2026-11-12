@@ -1,5 +1,3 @@
-import "./index.css";
+// const name = prompt("Hello, what is your name?");
 
-document.querySelector("#app").innerHTML = `
-  
-`;
+// console.log(`Hello! ${name}`);
