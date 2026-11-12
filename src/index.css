@@ -79,8 +79,9 @@
 
 :root {
   --main-color: #264653;
-  --second-color: #e9c46a;
-  --shadow: 0px 0px 0.1px #264653;
+  --second-color: #5b7065;
+  --shape-color: #d4d6d6;
+  --back-color: #dfdfdf;
   --mono: "Montserrat", sans-serif;
 }
 
@@ -95,6 +96,7 @@ html {
 }
 
 body {
+  background-color: var(--back-color);
   display: flex;
   font-family: var(--mono);
   font-weight: 700;
@@ -109,7 +111,7 @@ svg {
 }
 
 .button {
-  background-color: var(--second-color);
+  background-color: var(--shape-color);
   border-radius: 1rem;
   border: 4px solid var(--main-color);
   cursor: pointer;
@@ -120,6 +122,16 @@ svg {
   text-transform: uppercase;
   font-family: var(--mono);
   color: var(--main-color);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.shapes {
+  display: flex;
+  overflow: hidden;
+  max-height: 100vh;
 }
 
 .group-1 {
@@ -170,9 +182,9 @@ svg {
   animation-delay: 0s;
   width: 50vw;
   height: 75vh;
-  background-color: rgba(18, 226, 198, 0.4);
+  background-color: var(--shape-color);
   border-radius: 50% 50% 37% 63%/37% 50% 50% 63%;
-  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes move-to-display-2 {
@@ -204,15 +216,15 @@ svg {
 .loader-element-2 {
   position: relative;
   left: -25%;
-  top: 0;
+  top: 25%;
   animation: move-to-display-2 30s;
   animation-iteration-count: infinite;
   animation-delay: -2s;
   width: 57vw;
   height: 80vh;
-  background-color: rgba(18, 226, 198, 0.4);
+  background-color: var(--shape-color);
   border-radius: 63% 37% 50% 50%/50% 63% 37% 50%;
-  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes move-to-display-3 {
@@ -250,9 +262,9 @@ svg {
   animation-delay: -3s;
   width: 45vw;
   height: 63vh;
-  background-color: rgba(18, 226, 198, 0.4);
+  background-color: var(--shape-color);
   border-radius: 50% 50% 63% 37%/63% 50% 50% 37%;
-  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes move-to-display-4 {
@@ -283,20 +295,23 @@ svg {
 }
 .loader-element-4 {
   position: relative;
-  top: -20%;
+  top: 20%;
   left: 20%;
   animation: move-to-display-4 30s;
   animation-iteration-count: infinite;
   animation-delay: -5s;
   width: 38vw;
   height: 65vh;
-  background-color: rgba(18, 226, 198, 0.4);
+  background-color: var(--shape-color);
   border-radius: 37% 63% 50% 50%/50% 37% 63% 50%;
-  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
 }
 
 .header {
-  background-color: azure;
+  background-color: rgba(212, 214, 214, 0.5);
+  border-radius: 1rem;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(12px);
   position: fixed;
   top: 0.5rem;
   left: 25%;
@@ -329,7 +344,7 @@ svg {
 }
 
 .header nav ul li a:hover {
-  text-shadow: var(--shadow);
+  color: var(--second-color);
 }
 
 .header ul {
@@ -347,7 +362,7 @@ svg {
 }
 
 .header ul li:hover {
-  filter: drop-shadow(var(--shadow));
+  color: var(--second-color);
 }
 
 .main {
@@ -362,34 +377,39 @@ svg {
 }
 
 .footer {
+  height: 40vh;
+  margin-inline: 12%;
+  margin-top: 20rem;
+  margin-bottom: 4rem;
   background-color: beige;
-  height: 6rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
-  margin-inline: 20rem;
 }
 
 .section.about {
-  background-color: bisque;
-  padding-top: 4.5rem;
-  height: 100vh;
+  height: 80vh;
+  padding-top: 10rem;
+  margin-inline: 12%;
   display: flex;
   flex-direction: column;
+  align-items: end;
   gap: 1rem;
-  margin-inline: 12%;
+}
+
+.title-accent {
+  color: var(--second-color);
 }
 
 .section.home {
-  background-color: beige;
-  padding-top: 2rem;
   height: 100vh;
+  padding-top: 2rem;
+  margin-inline: 12%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
-  margin-inline: 12%;
 }
 
 .hero {
@@ -411,23 +431,33 @@ svg {
 }
 
 .section.projects {
-  background-color: beige;
-  padding-top: 4.5rem;
-  height: 100vh;
+  height: 80vh;
+  padding-top: 10rem;
+  margin-inline: 12%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   gap: 2rem;
-  margin-inline: 12%;
+}
+
+.lala {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.test {
+  border-radius: 20px;
+  height: 400px;
+  width: 300px;
+  background-color: var(--second-color);
 }
 
 .section.contact {
-  background-color: bisque;
-  padding-top: 4.5rem;
-  height: 100vh;
+  height: 50vh;
+  margin-inline: 12%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
-  margin-inline: 12%;
 }/*# sourceMappingURL=index.css.map */

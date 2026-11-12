@@ -1,3 +1,9 @@
+.shapes {
+  display: flex;
+  overflow: hidden;
+  max-height: 100vh;
+}
+
 .group-1 {
   display: flex;
   flex-direction: column;
@@ -46,9 +52,9 @@
   animation-delay: 0s;
   width: 50vw;
   height: 75vh;
-  background-color: rgba(18, 226, 198, 0.4);
+  background-color: var(--shape-color);
   border-radius: 50% 50% 37% 63% / 37% 50% 50% 63%;
-  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
 }
 @keyframes move-to-display-2 {
   0% {
@@ -79,15 +85,15 @@
 .loader-element-2 {
   position: relative;
   left: -25%;
-  top: 0;
+  top: 25%;
   animation: move-to-display-2 30s;
   animation-iteration-count: infinite;
   animation-delay: -2s;
   width: 57vw;
   height: 80vh;
-  background-color: rgba(18, 226, 198, 0.4);
+  background-color: var(--shape-color);
   border-radius: 63% 37% 50% 50% / 50% 63% 37% 50%;
-  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes move-to-display-3 {
@@ -125,9 +131,9 @@
   animation-delay: -3s;
   width: 45vw;
   height: 63vh;
-  background-color: rgba(18, 226, 198, 0.4);
+  background-color: var(--shape-color);
   border-radius: 50% 50% 63% 37% / 63% 50% 50% 37%;
-  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes move-to-display-4 {
@@ -158,14 +164,14 @@
 }
 .loader-element-4 {
   position: relative;
-  top: -20%;
+  top: 20%;
   left: 20%;
   animation: move-to-display-4 30s;
   animation-iteration-count: infinite;
   animation-delay: -5s;
   width: 38vw;
   height: 65vh;
-  background-color: rgba(18, 226, 198, 0.4);
+  background-color: var(--shape-color);
   border-radius: 37% 63% 50% 50% / 50% 37% 63% 50%;
-  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
 }

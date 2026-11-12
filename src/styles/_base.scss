@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  background-color: var(--back-color);
   display: flex;
   font-family: var(--mono);
   font-weight: 700;

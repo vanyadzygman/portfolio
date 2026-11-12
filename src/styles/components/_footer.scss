@@ -1,9 +1,12 @@
 .footer {
+  height: 40vh;
+  margin-inline: 12%;
+  margin-top: 20rem;
+  margin-bottom: 4rem;
   background-color: beige;
-  height: 6rem;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
-  margin-inline: 20rem;
 }
