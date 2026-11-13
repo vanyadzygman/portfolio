@@ -1,12 +1,13 @@
 .header {
   background-color: rgba(212, 214, 214, 0.5);
-  border-radius: 1rem;
+  border-radius: var(--border-radius);
   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(12px);
   position: fixed;
   top: 0.5rem;
   left: 25%;
   right: 25%;
+  z-index: 1;
   height: 4rem;
   width: 100%;
   max-width: 50vw;
@@ -18,38 +19,35 @@
     height: 40px;
     width: 40px;
   }
-}
-
-.header nav ul {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.header nav ul li {
-  list-style: none;
-}
-
-.header nav ul li a {
-  color: var(--main-color);
-  text-decoration: none;
-}
-.header nav ul li a:hover {
-  color: var(--second-color);
+  nav ul {
+    display: flex;
+    gap: 1.5rem;
+  }
+  nav ul li {
+    list-style: none;
+  }
+  nav ul li a {
+    color: var(--main-color);
+    text-decoration: none;
+    transition: 0.25s;
+  }
+  nav ul li a:hover {
+    color: var(--second-color);
+  }
 }
 
 .header ul {
   display: flex;
   gap: 1rem;
-}
-
-.header ul li {
-  list-style: none;
-  img,
-  svg {
-    height: 24px;
-    width: 24px;
+  li {
+    list-style: none;
+    img,
+    svg {
+      height: 24px;
+      width: 24px;
+    }
   }
-}
-.header ul li:hover {
-  color: var(--second-color);
+  li:hover {
+    color: var(--second-color);
+  }
 }

@@ -1,12 +1,20 @@
 .footer {
+  margin-top: 10rem;
+  margin-bottom: 1rem;
   height: 40vh;
-  margin-inline: 12%;
-  margin-top: 20rem;
-  margin-bottom: 4rem;
-  background-color: beige;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-box {
+  height: 100%;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 400px;
+
+  background-color: var(--main-color);
+  border-radius: var(--border-radius);
 }

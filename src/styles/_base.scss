@@ -9,16 +9,10 @@ html {
 }
 
 body {
-  background-color: var(--back-color);
+  background-color: var(--background-color);
   display: flex;
   font-family: var(--mono);
   font-weight: 700;
   color: var(--main-color);
   overflow: hidden;
-}
-
-img,
-svg {
-  height: 24px;
-  width: 24px;
 }
