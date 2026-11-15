@@ -1,10 +1,7 @@
 .section.home {
   height: 100vh;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
+  @include flex(flex, column, normal, center, 2rem);
 }
 
 .hero {
