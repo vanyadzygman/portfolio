@@ -15,7 +15,7 @@
   &.home::before {
     content: "";
     display: block;
-    @include size(0.3rem, 43rem);
+    @include size(0.3rem, 36rem);
     background-color: var(--second-color);
   }
 }

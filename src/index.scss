@@ -1,9 +1,9 @@
+@import "./styles/base";
+
 @import "./styles/utils/fonts";
 @import "./styles/utils/mixins";
 @import "./styles/utils/utils";
 @import "./styles/utils/variables";
-
-@import "./styles/base";
 
 @import "./styles/components/buttons";
 @import "./styles/components/links";
@@ -16,3 +16,5 @@
 @import "./styles/layouts/section-about";
 @import "./styles/layouts/section-home";
 @import "./styles/layouts/section-projects";
+
+@import "./styles/media/footer";

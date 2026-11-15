@@ -13,11 +13,13 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
+  justify-content: center;
   gap: 1.5rem;
 }
 
 .card {
   padding-inline: 8px;
+  min-width: 16rem;
 
   background-color: var(--card-color);
   border-radius: var(--border-radius);

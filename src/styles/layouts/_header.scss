@@ -1,6 +1,6 @@
 .header {
-  @include size(4rem, 100%);
-  max-width: 50vw;
+  @include size(4rem, 800px);
+  max-width: 95vw;
 
   background-color: rgba(212, 214, 214, 0.5);
   border-radius: var(--border-radius);
@@ -9,8 +9,9 @@
 
   position: fixed;
   top: 0.5rem;
-  left: 25%;
-  right: 25%;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
   z-index: 1;
 
   @include flex(normal, center, space-evenly, 0);
