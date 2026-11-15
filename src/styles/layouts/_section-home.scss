@@ -1,23 +1,11 @@
 .section.home {
   height: 100vh;
 
-  @include flex(flex, column, normal, center, 2rem);
+  @include flex(column, normal, center, 2rem);
 }
 
 .hero {
   text-transform: uppercase;
   font-size: 6rem;
   font-weight: 900;
-}
-
-.accent {
-  color: var(--second-color);
-}
-
-.accent::before {
-  content: "";
-  display: block;
-  height: 0.3rem;
-  width: 43rem;
-  background-color: var(--second-color);
 }

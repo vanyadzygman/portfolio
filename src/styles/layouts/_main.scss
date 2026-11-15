@@ -1,6 +1,6 @@
 .main {
-  margin-inline: 12vw;
   max-width: 100%;
+  margin-inline: 12vw;
 }
 
 .section-title {
@@ -11,4 +11,20 @@
 
 .title-accent {
   color: var(--second-color);
+
+  &.home::before {
+    content: "";
+    display: block;
+    @include size(0.3rem, 43rem);
+    background-color: var(--second-color);
+  }
+}
+
+.section-text {
+  text-align: right;
+  line-height: 1.25;
+
+  &.home {
+    text-align: left;
+  }
 }

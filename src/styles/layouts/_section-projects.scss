@@ -2,14 +2,13 @@
   height: 70vh;
   padding-top: var(--padd-top-sec);
 
-  @include flex(flex, column, center, normal, 2rem);
+  @include flex(column, center, normal, 2rem);
 }
 
 .card-container {
-  padding-inline: 15%;
+  @include size(50vh, 100%);
 
-  height: 100%;
-  width: 100%;
+  padding-inline: 15%;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -18,9 +17,7 @@
 }
 
 .card {
-  height: 100%;
-  width: 100%;
-  padding: 4px 8px;
+  padding-inline: 8px;
 
   background-color: var(--card-color);
   border-radius: var(--border-radius);
@@ -28,45 +25,80 @@
     5px 5px 10px 2.5px #999999bb,
     inset 0 0 0 0 #999999bb;
 
-  @include flex(flex, column, normal, space-evenly, 10px);
+  @include flex(column, normal, center, 10px);
 
   transition: box-shadow 0.2s ease;
-
-  img,
-  svg {
-    height: 50%;
-    width: 100%;
-    border-radius: inherit;
-  }
 
   &:hover {
     box-shadow:
       0 0 0 0 #99999900,
       inset 5px 5px 10px 0px #999999bb;
-    scale: 0.99;
+  }
+
+  img {
+    height: 100%;
+    width: 140%;
+  }
+}
+
+.card-section {
+  height: 20vh;
+  @include flex(column, normal, space-evenly, 10px);
+  overflow: hidden;
+
+  &.picture {
+    margin-top: 16px;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: var(--border-radius);
+    box-shadow: 2.5px 2.5px 10px 1px #999999bb;
+
+    cursor: pointer;
+
+    img {
+      transition: scale 0.25s ease;
+      &:hover {
+        scale: 1.15;
+      }
+    }
   }
 }
 
 .card-title {
   font-size: 26px;
   font-weight: 700;
+
+  a {
+    transition: color 0.25s ease;
+    &:hover {
+      color: var(--second-color);
+    }
+  }
 }
 
 .card-desctiption {
   font-size: var(--paragraph-size);
-  color: #38463e;
 }
 
 .card-date {
-  height: 30px;
-  width: max-content;
+  @include size(30px, max-content);
+
   padding: 12px;
 
   background-color: rgb(165, 165, 165);
   border-radius: var(--border-radius);
   box-shadow:
     2.5px 2.5px 10px 1px #999999bb,
-    inset 2.5px 2.5px 10px 1px #999999bb;
+    inset 0 0 0 0 #999999bb;
 
-  @include flex(flex, normal, center, center, 0);
+  @include flex(normal, center, center, 0);
+  cursor: default;
+
+  &:hover {
+    box-shadow:
+      2.5px 2.5px 10px 1px #999999bb,
+      inset 2.5px 2.5px 10px 1px #999999bb;
+  }
 }

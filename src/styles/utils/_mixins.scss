@@ -1,4 +1,9 @@
-@mixin flex($display, $flex-direction, $align-items, $justify-content, $gap) {
+@mixin size($height, $width) {
+  height: $height;
+  width: $width;
+}
+
+@mixin flex($flex-direction, $align-items, $justify-content, $gap) {
   display: flex;
   flex-direction: $flex-direction;
   align-items: $align-items;

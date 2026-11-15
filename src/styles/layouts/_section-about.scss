@@ -2,7 +2,7 @@
   height: 70vh;
   padding-top: var(--padd-top-sec);
 
-  @include flex(flex, column, flex-end, center, 1rem);
+  @include flex(column, flex-end, center, 1rem);
 }
 
 .certificates {
@@ -25,18 +25,17 @@
     }
     img,
     svg {
-      height: 100%;
-      width: 100%;
+      @include size(100%, 100%);
+
       border-radius: inherit;
     }
   }
 }
 
 .panel {
-  height: 4rem;
-  width: 30vw;
-
-  @include flex(flex, row, center, center, 0);
+  @include size(4rem, max-content);
+  @include flex(row, center, center, 0);
+  opacity: 85%;
 
   overflow: hidden;
   border-radius: var(--border-radius);
@@ -48,9 +47,18 @@
 
   ul li {
     list-style: none;
-    height: 3rem;
-    width: 3rem;
-    background-color: rgb(155, 155, 155);
-    border-radius: var(--border-radius);
+    @include size(3rem, 3rem);
+
+    // background-color: rgb(155, 155, 155);
+    // border-radius: var(--border-radius);
+  }
+}
+
+.panel-icon {
+  @include size(100%, 100%);
+
+  img,
+  svg {
+    @include size(100%, 100%);
   }
 }
