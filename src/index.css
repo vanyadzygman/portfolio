@@ -87,6 +87,7 @@
   --padd-top-sec: 10rem;
   --border-radius: 20px;
   --mono: "Montserrat", sans-serif;
+  --paragraph-size: 14px;
 }
 
 * {
@@ -379,11 +380,12 @@ body {
 
 .footer {
   margin-top: 10rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   height: 40vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: normal;
   gap: 1rem;
 }
 
@@ -392,8 +394,42 @@ body {
   width: 100%;
   max-width: 1000px;
   max-height: 400px;
-  background-color: var(--main-color);
+  padding: 3rem;
+  background-color: var(--card-color);
   border-radius: var(--border-radius);
+  box-shadow: 5px 5px 10px 2.5px rgba(153, 153, 153, 0.7333333333);
+  display: flex;
+  flex-direction: normal;
+  align-items: normal;
+  justify-content: normal;
+  gap: 0;
+}
+.footer-box .box-section {
+  color: var(--main-color);
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: space-between;
+  gap: 0;
+}
+.footer-box .box-section .box-section-title {
+  font-size: 2.5rem;
+}
+.footer-box .box-section .box-section-text {
+  font-size: var(--paragraph-size);
+}
+
+.box-section ul {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+}
+.box-section ul img,
+.box-section ul svg {
+  height: 2.5rem;
+  width: 2.5rem;
 }
 
 .section.about {
@@ -438,6 +474,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 0;
   overflow: hidden;
   border-radius: var(--border-radius);
 }
@@ -531,7 +568,7 @@ body {
 }
 
 .card-desctiption {
-  font-size: 14px;
+  font-size: var(--paragraph-size);
   color: #38463e;
 }
 
@@ -540,10 +577,12 @@ body {
   width: -moz-max-content;
   width: max-content;
   padding: 12px;
-  background-color: rgb(146, 146, 146);
+  background-color: rgb(165, 165, 165);
   border-radius: var(--border-radius);
+  box-shadow: 2.5px 2.5px 10px 1px rgba(153, 153, 153, 0.7333333333), inset 2.5px 2.5px 10px 1px rgba(153, 153, 153, 0.7333333333);
   display: flex;
   flex-direction: normal;
   align-items: center;
   justify-content: center;
+  gap: 0;
 }/*# sourceMappingURL=index.css.map */

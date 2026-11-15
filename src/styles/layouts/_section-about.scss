@@ -2,9 +2,7 @@
   height: 70vh;
   padding-top: var(--padd-top-sec);
 
-  @include flex(flex, column, flex-end, center);
-
-  gap: 1rem;
+  @include flex(flex, column, flex-end, center, 1rem);
 }
 
 .certificates {
@@ -38,7 +36,7 @@
   height: 4rem;
   width: 30vw;
 
-  @include flex(flex, row, center, center);
+  @include flex(flex, row, center, center, 0);
 
   overflow: hidden;
   border-radius: var(--border-radius);

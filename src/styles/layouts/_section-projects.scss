@@ -53,7 +53,7 @@
 }
 
 .card-desctiption {
-  font-size: 14px;
+  font-size: var(--paragraph-size);
   color: #38463e;
 }
 
@@ -62,8 +62,11 @@
   width: max-content;
   padding: 12px;
 
-  background-color: rgb(146, 146, 146);
+  background-color: rgb(165, 165, 165);
   border-radius: var(--border-radius);
+  box-shadow:
+    2.5px 2.5px 10px 1px #999999bb,
+    inset 2.5px 2.5px 10px 1px #999999bb;
 
   @include flex(flex, normal, center, center, 0);
 }
