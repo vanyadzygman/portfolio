@@ -9,10 +9,10 @@
 @import "./styles/components/links";
 @import "./styles/components/load";
 
-@import "./styles/components/header";
-@import "./styles/components/main";
-@import "./styles/components/footer";
+@import "./styles/layouts/header";
+@import "./styles/layouts/main";
+@import "./styles/layouts/footer";
 
-@import "./styles/components/section-about";
-@import "./styles/components/section-home";
-@import "./styles/components/section-projects";
+@import "./styles/layouts/section-about";
+@import "./styles/layouts/section-home";
+@import "./styles/layouts/section-projects";
