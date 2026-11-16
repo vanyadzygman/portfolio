@@ -1,12 +1,13 @@
 .section.projects {
-  height: 70vh;
+  height: max-content;
   padding-top: var(--padd-top-sec);
 
   @include flex(column, center, normal, 2rem);
 }
 
 .card-container {
-  @include size(50vh, 100%);
+  @include size(100%, 100%);
+  max-height: max-content;
 
   padding-inline: 15%;
 
@@ -18,7 +19,7 @@
 }
 
 .card {
-  padding-inline: 8px;
+  padding: 8px;
   min-width: 16rem;
 
   background-color: var(--card-color);
@@ -49,8 +50,6 @@
   overflow: hidden;
 
   &.picture {
-    margin-top: 16px;
-
     display: flex;
     align-items: center;
 
