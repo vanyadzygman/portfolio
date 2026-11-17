@@ -1,3 +1,15 @@
+@media (max-width: 1575px) {
+  .about-part {
+    min-width: 50%;
+  }
+}
+
+@media (max-width: 1295px) {
+  .section-title.about {
+    font-size: 3.5rem;
+  }
+}
+
 @media (max-width: 1065px) {
   .box-section-title {
     font-size: 2rem;
@@ -11,6 +23,23 @@
   .title-accent {
     &.home::before {
       @include size(0.3rem, 36rem);
+    }
+  }
+
+  .section.about {
+    @include flex(column-reverse, center, space-between, 1rem);
+  }
+  .section-title.about {
+    font-size: 4.5rem;
+  }
+
+  .about-part {
+    &.second {
+      align-items: center;
+    }
+
+    .section-text {
+      text-align: center;
     }
   }
 
@@ -66,6 +95,10 @@
 
   .section-title {
     font-size: 4rem;
+
+    &.about {
+      font-size: 4rem;
+    }
   }
 
   .footer {
@@ -84,7 +117,10 @@
   }
 
   .section-title {
-    font-size: 3.5rem;
+    font-size: 4rem;
+  }
+  .section-title.about {
+    font-size: 4rem;
   }
   .main {
     margin-inline: 0;
@@ -103,6 +139,10 @@
 
   .section-title {
     font-size: 3rem;
+
+    &.about {
+      font-size: 3rem;
+    }
   }
 
   .section-text {
@@ -133,6 +173,10 @@
 @media (max-width: 545px) {
   .section-title {
     font-size: 2.5rem;
+
+    &.about {
+      font-size: 2.5rem;
+    }
   }
 
   .box-section-title {
@@ -187,8 +231,13 @@
 
     .box-section {
       width: 100%;
-      align-items: center;
+      align-items: flex-start;
       gap: 1rem;
+
+      .box-section-text.footer {
+        margin: 0;
+        width: 75%;
+      }
     }
   }
 

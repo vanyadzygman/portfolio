@@ -1,6 +1,6 @@
 .footer {
   height: 40vh;
-  margin-top: var(--padd-top-sec);
+  margin-top: 7.5rem;
   margin-bottom: 2rem;
 
   @include flex(column, center, normal, 1rem);
@@ -21,10 +21,11 @@
 
   .box-section {
     color: var(--main-color);
-    @include size(100%, 50%);
-    @include flex(column, normal, space-between, 0);
+    width: 50%;
+    @include flex(column, flex-start, space-between, 0);
 
     .box-section-text {
+      margin: 0;
       font-size: var(--paragraph-size);
     }
   }

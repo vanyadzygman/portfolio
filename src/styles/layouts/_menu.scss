@@ -40,12 +40,6 @@
   }
 }
 
-.menu:target {
+.menu.is-open {
   transform: translateX(0);
-}
-
-.menu-btn-section {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
 }

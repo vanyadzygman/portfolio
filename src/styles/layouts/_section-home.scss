@@ -1,4 +1,6 @@
 .section.home {
+  align-self: flex-start;
+
   height: 100vh;
 
   @include flex(column, normal, center, 2rem);
