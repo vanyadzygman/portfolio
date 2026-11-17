@@ -86,6 +86,9 @@
   .section-title {
     font-size: 3.5rem;
   }
+  .main {
+    margin-inline: 0;
+  }
 }
 
 @media (max-width: 640px) {
@@ -110,6 +113,21 @@
     font-size: 14px;
     @include size(4rem, 9rem);
   }
+
+  .section.about {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+//menu
+@media (max-width: 620px) {
+  .header nav {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
 }
 
 @media (max-width: 545px) {
@@ -126,6 +144,16 @@
       @include size(2rem, 2rem);
     }
   }
+
+  .footer {
+    height: 35vh;
+  }
+
+  .section.home {
+    align-items: flex-start;
+  }
+
+  //header
 }
 
 @media (max-width: 485px) {
@@ -135,7 +163,7 @@
   }
 }
 
-@media (max-width: 465px) {
+@media (max-width: 468px) {
   .card {
     height: 20rem;
     min-width: 16rem;
@@ -145,5 +173,26 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  .footer {
+    height: max-content;
+  }
+  .footer-box {
+    width: 100%;
+    padding: 1.5rem;
+
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .box-section {
+      width: 100%;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+
+  .box-section.links {
+    align-items: center;
   }
 }

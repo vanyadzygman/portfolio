@@ -9,3 +9,13 @@
   overflow: scroll;
   scroll-behavior: smooth;
 }
+
+img,
+svg {
+  @include size(40px, 40px);
+  transition: 0.25s;
+
+  &:hover {
+    color: var(--second-color);
+  }
+}

@@ -1,0 +1,51 @@
+.menu {
+  padding-inline: 2.2rem;
+  padding-bottom: 1rem;
+  @include size(40vh, 60vw);
+
+  background-color: rgba(212, 214, 214, 0.5);
+  border-radius: var(--border-radius);
+  box-shadow: 0px 0px 12px 0px rgba(70, 70, 70, 0.5);
+  backdrop-filter: blur(16px);
+
+  position: absolute;
+  top: 5rem;
+  right: 2.5vw;
+  z-index: 2;
+
+  font-size: 2.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateY(-140%);
+  transition: transform 0.5s;
+
+  ul {
+    list-style: none;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    a {
+      transition: color 0.25s;
+      &:hover {
+        color: var(--second-color);
+      }
+    }
+  }
+}
+
+.menu:target {
+  transform: translateX(0);
+}
+
+.menu-btn-section {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}

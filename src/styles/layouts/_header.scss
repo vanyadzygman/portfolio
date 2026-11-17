@@ -11,20 +11,11 @@
   top: 0.5rem;
   left: 0;
   right: 0;
-  margin-inline: auto;
   z-index: 1;
 
-  @include flex(normal, center, space-evenly, 0);
+  margin-inline: auto;
 
-  img,
-  svg {
-    @include size(40px, 40px);
-    transition: 0.25s;
-
-    &:hover {
-      color: var(--second-color);
-    }
-  }
+  @include flex(row, center, space-evenly, 1rem);
 
   nav ul {
     display: flex;
@@ -61,4 +52,8 @@
       color: var(--second-color);
     }
   }
+}
+
+.menu-btn {
+  display: none;
 }

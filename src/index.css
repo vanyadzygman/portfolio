@@ -102,6 +102,17 @@ a {
   scroll-behavior: smooth;
 }
 
+img,
+svg {
+  height: 40px;
+  width: 40px;
+  transition: 0.25s;
+}
+img:hover,
+svg:hover {
+  color: var(--second-color);
+}
+
 :root {
   --main-color: #264653;
   --second-color: #5b7065;
@@ -112,6 +123,51 @@ a {
   --border-radius: 20px;
   --mono: "Montserrat", sans-serif;
   --paragraph-size: 14px;
+}
+
+.menu {
+  padding-inline: 2.2rem;
+  padding-bottom: 1rem;
+  height: 40vh;
+  width: 60vw;
+  background-color: rgba(212, 214, 214, 0.5);
+  border-radius: var(--border-radius);
+  box-shadow: 0px 0px 12px 0px rgba(70, 70, 70, 0.5);
+  backdrop-filter: blur(16px);
+  position: absolute;
+  top: 5rem;
+  right: 2.5vw;
+  z-index: 2;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-140%);
+  transition: transform 0.5s;
+}
+.menu ul {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.menu ul a {
+  transition: color 0.25s;
+}
+.menu ul a:hover {
+  color: var(--second-color);
+}
+
+.menu:target {
+  transform: translateX(0);
+}
+
+.menu-btn-section {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .button {
@@ -327,23 +383,13 @@ a {
   top: 0.5rem;
   left: 0;
   right: 0;
-  margin-inline: auto;
   z-index: 1;
+  margin-inline: auto;
   display: flex;
-  flex-direction: normal;
+  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  gap: 0;
-}
-.header img,
-.header svg {
-  height: 40px;
-  width: 40px;
-  transition: 0.25s;
-}
-.header img:hover,
-.header svg:hover {
-  color: var(--second-color);
+  gap: 1rem;
 }
 .header nav ul {
   display: flex;
@@ -376,6 +422,10 @@ a {
 }
 .header ul a:hover {
   color: var(--second-color);
+}
+
+.menu-btn {
+  display: none;
 }
 
 .main {
@@ -448,6 +498,10 @@ a {
   font-size: var(--paragraph-size);
 }
 
+.box-section.links {
+  align-items: flex-end;
+}
+
 .box-section-title {
   font-size: 2.5rem;
 }
@@ -474,10 +528,43 @@ a {
   height: 70vh;
   padding-top: var(--padd-top-sec);
   display: flex;
+  flex-direction: normal;
+  align-items: normal;
+  justify-content: normal;
+  gap: 0;
+}
+
+.about-part {
+  width: 50%;
+  display: flex;
+}
+.about-part.first {
+  padding-left: 4rem;
+  justify-content: flex-start;
+}
+.about-part.second {
+  padding-right: 6rem;
   flex-direction: column;
   align-items: flex-end;
-  justify-content: center;
   gap: 1rem;
+}
+.about-part img,
+.about-part svg {
+  width: 100%;
+  height: 100%;
+  transition: scale 0.25s ease;
+}
+.about-part img:hover,
+.about-part svg:hover {
+  scale: 1.1;
+}
+
+.about-part-item {
+  min-width: 30.25rem;
+  border: 4px solid var(--main-color);
+  border-radius: 54% 46% 66% 34%/55% 62% 38% 45%;
+  overflow: hidden;
+  box-shadow: 5px 5px 10px 2.5px rgba(153, 153, 153, 0.7333333333), inset 0 0 0 0 rgba(153, 153, 153, 0.7333333333);
 }
 
 .panel {
@@ -706,6 +793,9 @@ a {
   .section-title {
     font-size: 3.5rem;
   }
+  .main {
+    margin-inline: 0;
+  }
 }
 @media (max-width: 640px) {
   .hero {
@@ -726,6 +816,18 @@ a {
     height: 4rem;
     width: 9rem;
   }
+  .section.about {
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (max-width: 620px) {
+  .header nav {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
 }
 @media (max-width: 545px) {
   .section-title {
@@ -739,6 +841,12 @@ a {
     height: 2rem;
     width: 2rem;
   }
+  .footer {
+    height: 35vh;
+  }
+  .section.home {
+    align-items: flex-start;
+  }
 }
 @media (max-width: 485px) {
   .card-date {
@@ -748,7 +856,7 @@ a {
     width: max-content;
   }
 }
-@media (max-width: 465px) {
+@media (max-width: 468px) {
   .card {
     height: 20rem;
     min-width: 16rem;
@@ -757,5 +865,23 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  .footer {
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .footer-box {
+    width: 100%;
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .footer-box .box-section {
+    width: 100%;
+    align-items: center;
+    gap: 1rem;
+  }
+  .box-section.links {
+    align-items: center;
   }
 }/*# sourceMappingURL=index.css.map */
