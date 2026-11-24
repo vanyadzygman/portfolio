@@ -1,4 +1,4 @@
-import "./_main.scss";
+import "./Main.scss";
 import Home from "../sections/Home";
 import About from "../sections/About";
 import Projects from "../sections/Projects";

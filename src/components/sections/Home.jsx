@@ -1,4 +1,4 @@
-import "./_section-home.scss";
+import "./Section-home.scss";
 
 export default () => {
   return (

@@ -1,4 +1,4 @@
-import "./_load.scss";
+import "./Load.scss";
 
 export default () => {
   return (

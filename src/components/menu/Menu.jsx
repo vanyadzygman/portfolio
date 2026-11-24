@@ -1,4 +1,4 @@
-import "./_menu.scss";
+import "./Menu.scss";
 
 export default () => {
   return (
