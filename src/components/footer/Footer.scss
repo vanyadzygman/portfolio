@@ -4,55 +4,37 @@
   margin-bottom: 2rem;
 
   @include flex(column, center, normal, 1rem);
-}
 
-.footer-box {
-  @include size(100%, 100%);
-  max-width: 1000px;
-  max-height: 400px;
+  &__box {
+    @include size(100%, 100%);
+    max-width: 1000px;
+    max-height: 400px;
 
-  padding: 3rem;
+    padding: 3rem;
 
-  background-color: var(--card-color);
-  border-radius: var(--border-radius);
-  box-shadow: 5px 5px 10px 2.5px #999999bb;
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    box-shadow: 5px 5px 10px 2.5px #999999bb;
 
-  @include flex(normal, normal, normal, 0);
+    @include flex(normal, normal, normal, 0);
+  }
 
-  .box-section {
+  &__section {
     color: var(--main-color);
     width: 50%;
     @include flex(column, flex-start, space-between, 0);
 
-    .box-section-text {
-      margin: 0;
-      font-size: var(--paragraph-size);
+    &--links {
+      align-items: flex-end;
     }
   }
-}
-.box-section.links {
-  align-items: flex-end;
-}
 
-.box-section-title {
-  font-size: 2.5rem;
-}
-
-.box-section ul {
-  display: flex;
-  gap: 0.5rem;
-
-  list-style: none;
-
-  a {
-    color: var(--main-color);
-    transition: color 0.25s;
-    &:hover {
-      color: var(--second-color);
-    }
+  &__heading {
+    font-size: 2.2rem;
   }
-  img,
-  svg {
-    @include size(2.5rem, 2.5rem);
+
+  &__text {
+    margin: 0;
+    font-size: var(--paragraph-size);
   }
 }

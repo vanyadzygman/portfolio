@@ -1,0 +1,29 @@
+.socials {
+  display: flex;
+  list-style: none;
+
+  &--small {
+    gap: 1rem;
+  }
+
+  &--large {
+    gap: 0.5rem;
+  }
+
+  &__link {
+    color: var(--main-color);
+    transition: color 0.25s;
+
+    &:hover {
+      color: var(--second-color);
+    }
+  }
+
+  &--small &__icon {
+    @include size(24px, 24px);
+  }
+
+  &--large &__icon {
+    @include size(2.5rem, 2.5rem);
+  }
+}

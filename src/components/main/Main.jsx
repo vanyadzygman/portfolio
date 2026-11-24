@@ -1,7 +1,7 @@
 import "./Main.scss";
-import Home from "../sections/Home";
-import About from "../sections/About";
-import Projects from "../sections/Projects";
+import Home from "../home/Home";
+import About from "../about/About";
+import Projects from "../projects/Projects";
 
 export default () => {
   return (

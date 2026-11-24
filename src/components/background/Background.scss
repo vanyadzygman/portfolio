@@ -1,22 +1,63 @@
-.shapes {
+.background {
   display: flex;
   overflow: hidden;
   max-height: 100vh;
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &--right {
+      margin-left: auto;
+    }
+  }
+
+  &__shape {
+    position: relative;
+    animation: background-float 30s infinite;
+    background-color: var(--shape-color);
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+
+    &--1 {
+      top: -18%;
+      left: -25%;
+      animation-delay: 0s;
+      width: 50vw;
+      height: 75vh;
+      border-radius: 50% 50% 37% 63% / 37% 50% 50% 63%;
+    }
+
+    &--2 {
+      left: -25%;
+      top: 25%;
+      animation-delay: -2s;
+      width: 57vw;
+      height: 80vh;
+      border-radius: 63% 37% 50% 50% / 50% 63% 37% 50%;
+    }
+
+    &--3 {
+      top: -20%;
+      left: 20%;
+      animation-delay: -3s;
+      width: 45vw;
+      height: 63vh;
+      border-radius: 50% 50% 63% 37% / 63% 50% 50% 37%;
+    }
+
+    &--4 {
+      top: 20%;
+      left: 20%;
+      animation-delay: -5s;
+      width: 38vw;
+      height: 65vh;
+      border-radius: 37% 63% 50% 50% / 50% 37% 63% 50%;
+    }
+  }
 }
 
-.group-1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.group-2 {
-  margin-left: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-@keyframes move-to-display-1 {
+@keyframes background-float {
   0% {
     translate: -5% -5%;
   }
@@ -41,137 +82,4 @@
   100% {
     translate: -5% -5%;
   }
-}
-
-.loader-element-1 {
-  position: relative;
-  top: -18%;
-  left: -25%;
-  animation: move-to-display-1 30s;
-  animation-iteration-count: infinite;
-  animation-delay: 0s;
-  width: 50vw;
-  height: 75vh;
-  background-color: var(--shape-color);
-  border-radius: 50% 50% 37% 63% / 37% 50% 50% 63%;
-  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
-}
-@keyframes move-to-display-2 {
-  0% {
-    translate: -5% -5%;
-  }
-  20% {
-    translate: 8vw -6vh;
-    scale: 0.85;
-    rotate: 5deg;
-  }
-  40% {
-    translate: -4vw 5vh;
-  }
-  60% {
-    translate: 6vw 4vh;
-    scale: 1;
-    rotate: 10deg;
-  }
-  80% {
-    translate: -3vw -4vh;
-    scale: 1.15;
-    rotate: 5deg;
-  }
-  100% {
-    translate: -5% -5%;
-  }
-}
-.loader-element-2 {
-  position: relative;
-  left: -25%;
-  top: 25%;
-  animation: move-to-display-2 30s;
-  animation-iteration-count: infinite;
-  animation-delay: -2s;
-  width: 57vw;
-  height: 80vh;
-  background-color: var(--shape-color);
-  border-radius: 63% 37% 50% 50% / 50% 63% 37% 50%;
-  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
-}
-
-@keyframes move-to-display-3 {
-  0% {
-    translate: -5% -5%;
-  }
-  20% {
-    translate: 8vw -6vh;
-    scale: 0.85;
-    rotate: 5deg;
-  }
-  40% {
-    translate: -4vw 5vh;
-  }
-  60% {
-    translate: 6vw 4vh;
-    scale: 1;
-    rotate: 10deg;
-  }
-  80% {
-    translate: -3vw -4vh;
-    scale: 1.15;
-    rotate: 5deg;
-  }
-  100% {
-    translate: -5% -5%;
-  }
-}
-.loader-element-3 {
-  position: relative;
-  top: -20%;
-  left: 20%;
-  animation: move-to-display-3 30s;
-  animation-iteration-count: infinite;
-  animation-delay: -3s;
-  width: 45vw;
-  height: 63vh;
-  background-color: var(--shape-color);
-  border-radius: 50% 50% 63% 37% / 63% 50% 50% 37%;
-  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
-}
-
-@keyframes move-to-display-4 {
-  0% {
-    translate: -5% -5%;
-  }
-  20% {
-    translate: 8vw -6vh;
-    scale: 0.85;
-    rotate: 5deg;
-  }
-  40% {
-    translate: -4vw 5vh;
-  }
-  60% {
-    translate: 6vw 4vh;
-    scale: 1;
-    rotate: 10deg;
-  }
-  80% {
-    translate: -3vw -4vh;
-    scale: 1.15;
-    rotate: 5deg;
-  }
-  100% {
-    translate: -5% -5%;
-  }
-}
-.loader-element-4 {
-  position: relative;
-  top: 20%;
-  left: 20%;
-  animation: move-to-display-4 30s;
-  animation-iteration-count: infinite;
-  animation-delay: -5s;
-  width: 38vw;
-  height: 65vh;
-  background-color: var(--shape-color);
-  border-radius: 37% 63% 50% 50% / 50% 37% 63% 50%;
-  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
 }

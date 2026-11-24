@@ -1,5 +1,5 @@
 {
-  "name": "minista-project",
+  "name": "portfolio",
   "private": true,
   "type": "module",
   "engines": {
@@ -11,6 +11,9 @@
     "preview": "minista preview"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.15.0",
+    "globals": "^17.14.0",
     "minista": "^5.1.2",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
