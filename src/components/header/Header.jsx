@@ -112,7 +112,7 @@ export default () => {
         </li>
       </ul>
       <button
-        class="menu-btn"
+        className="menu-btn"
         type="button"
         aria-label="Toggle menu"
         aria-controls="menu"

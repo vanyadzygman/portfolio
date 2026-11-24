@@ -3,17 +3,18 @@ import "./_footer.scss";
 export default () => {
   return (
     <footer className="footer" id="contacts">
-      <h2 class="section-title">Contacts</h2>
-      <div class="footer-box">
-        <div class="box-section">
-          <h3 class="box-section-title">
-            Do you want to ask <span class="title-accent">something interesting?</span>
+      <h2 className="section-title">Contacts</h2>
+      <div className="footer-box">
+        <div className="box-section">
+          <h3 className="box-section-title">
+            Do you want to ask{" "}
+            <span className="title-accent">something interesting?</span>
           </h3>
-          <p class="box-section-text">
+          <p className="box-section-text">
             Contact me. I’m available Mon–Fri, 8 am to 8 pm (GMT).
           </p>
         </div>
-        <div class="box-section links">
+        <div className="box-section links">
           <div>
             <ul>
               <li>
@@ -90,7 +91,7 @@ export default () => {
               </li>
             </ul>
           </div>
-          <p class="box-section-text">&copy; Ivan Dzyhman, 2026</p>
+          <p className="box-section-text">&copy; Ivan Dzyhman, 2026</p>
         </div>
       </div>
     </footer>
