@@ -1,0 +1,7 @@
+// Global styles. Partials that need mixins @use them themselves:
+// additionalData in vite.config.js only reaches files imported from JS.
+@use "variables";
+@use "fonts";
+@use "base";
+@use "utils";
+@use "typography";

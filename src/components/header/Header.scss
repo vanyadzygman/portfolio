@@ -17,49 +17,28 @@
 
   @include flex(row, center, space-evenly, 1rem);
 
-  nav ul {
+  &__nav-list {
     display: flex;
     gap: 1.5rem;
-
-    li {
-      list-style: none;
-    }
-    a {
-      transition: 0.25s;
-
-      &:hover {
-        color: var(--second-color);
-      }
-    }
-  }
-}
-
-.header ul {
-  display: flex;
-  gap: 1rem;
-  li {
     list-style: none;
-    svg {
-      @include size(24px, 24px);
-    }
   }
 
-  a {
+  &__nav-link {
     color: var(--main-color);
-    transition: color 0.25s;
+    transition: 0.25s;
 
     &:hover {
       color: var(--second-color);
     }
   }
-}
 
-.menu-btn {
-  background: none;
-  border: none;
-  padding: 0;
-  font: inherit;
-  color: inherit;
-  display: none;
-  cursor: pointer;
+  &__menu-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    display: none;
+    cursor: pointer;
+  }
 }

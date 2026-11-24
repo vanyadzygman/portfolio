@@ -1,58 +1,54 @@
 @media (max-width: 1575px) {
-  .about-part {
+  .about__part {
     min-width: 50%;
   }
 }
 
 @media (max-width: 1295px) {
-  .section-title.about {
+  .about__title {
     font-size: 3.5rem;
   }
 }
 
 @media (max-width: 1065px) {
-  .box-section-title {
+  .footer__heading {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 1015px) {
-  .hero {
+  .home__title {
     font-size: 5rem;
   }
-  .title-accent {
-    &.home::before {
-      @include size(0.3rem, 36rem);
-    }
+  .title-accent--line::before {
+    @include size(0.3rem, 36rem);
   }
 
-  .section.about {
+  .about {
     @include flex(column-reverse, center, space-between, 1rem);
   }
-  .section-title.about {
+  .about__title {
     font-size: 4.5rem;
   }
 
-  .about-part {
-    &.second {
-      align-items: center;
-    }
+  .about__part--info {
+    align-items: center;
+  }
 
-    .section-text {
-      text-align: center;
-    }
+  .about__text {
+    text-align: center;
   }
 
   .card {
     min-width: 14rem;
   }
-  .card-section {
+  .card__section {
     height: 17vh;
   }
 }
 
 @media (max-width: 900px) {
-  .card-container {
+  .projects__cards {
     padding-inline: 0;
 
     @include flex(column, center, normal, 1.5rem);
@@ -67,10 +63,10 @@
     padding: 8px 16px;
   }
 
-  .card-section {
+  .card__section {
     height: 100%;
 
-    &.picture {
+    &--picture {
       min-width: 14rem;
       max-width: 14rem;
     }
@@ -78,27 +74,22 @@
 }
 
 @media (max-width: 875px) {
-  .box-section-title {
+  .footer__heading {
     font-size: 1.75rem;
   }
 }
 
 @media (max-width: 845px) {
-  .hero {
+  .home__title {
     font-size: 4.5rem;
   }
-  .title-accent {
-    &.home::before {
-      @include size(0.3rem, 32rem);
-    }
+  .title-accent--line::before {
+    @include size(0.3rem, 32rem);
   }
 
-  .section-title {
+  .section-title,
+  .about__title {
     font-size: 4rem;
-
-    &.about {
-      font-size: 4rem;
-    }
   }
 
   .footer {
@@ -107,42 +98,34 @@
 }
 
 @media (max-width: 755px) {
-  .hero {
+  .home__title {
     font-size: 4rem;
   }
-  .title-accent {
-    &.home::before {
-      @include size(0.3rem, 28.5rem);
-    }
+  .title-accent--line::before {
+    @include size(0.3rem, 28.5rem);
   }
 
-  .section-title {
+  .section-title,
+  .about__title {
     font-size: 4rem;
   }
-  .section-title.about {
-    font-size: 4rem;
-  }
+
   .main {
     margin-inline: 0;
   }
 }
 
 @media (max-width: 640px) {
-  .hero {
+  .home__title {
     font-size: 3rem;
   }
-  .title-accent {
-    &.home::before {
-      @include size(0.3rem, 21.5rem);
-    }
+  .title-accent--line::before {
+    @include size(0.3rem, 21.5rem);
   }
 
-  .section-title {
+  .section-title,
+  .about__title {
     font-size: 3rem;
-
-    &.about {
-      font-size: 3rem;
-    }
   }
 
   .section-text {
@@ -154,7 +137,7 @@
     @include size(4rem, 9rem);
   }
 
-  .section.about {
+  .about {
     align-items: center;
     text-align: center;
   }
@@ -162,46 +145,38 @@
 
 //menu
 @media (max-width: 620px) {
-  .header nav {
+  .header__nav {
     display: none;
   }
-  .menu-btn {
+  .header__menu-btn {
     display: block;
   }
 }
 
 @media (max-width: 545px) {
-  .section-title {
+  .section-title,
+  .about__title {
     font-size: 2.5rem;
-
-    &.about {
-      font-size: 2.5rem;
-    }
   }
 
-  .box-section-title {
+  .footer__heading {
     font-size: 1.5rem;
   }
-  .box-section ul {
-    img,
-    svg {
-      @include size(2rem, 2rem);
-    }
+  .socials--large .socials__icon {
+    @include size(2rem, 2rem);
   }
 
   .footer {
     height: 35vh;
   }
 
-  .section.home {
+  .home {
     align-items: flex-start;
   }
-
-  //header
 }
 
 @media (max-width: 485px) {
-  .card-date {
+  .card__date {
     font-size: 14px;
     @include size(20px, max-content);
   }
@@ -222,26 +197,21 @@
   .footer {
     height: max-content;
   }
-  .footer-box {
+  .footer__box {
     width: 100%;
     padding: 1.5rem;
 
     flex-direction: column;
     gap: 1.5rem;
-
-    .box-section {
-      width: 100%;
-      align-items: flex-start;
-      gap: 1rem;
-
-      .box-section-text.footer {
-        margin: 0;
-        width: 75%;
-      }
-    }
   }
 
-  .box-section.links {
-    align-items: center;
+  .footer__section {
+    width: 100%;
+    align-items: flex-start;
+    gap: 1rem;
+
+    &--links {
+      align-items: center;
+    }
   }
 }
